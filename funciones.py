@@ -84,3 +84,20 @@ def mostar_cursos_de(alumno_o_profesor, esProfesor=False):
             print("Curso inexistente.")
     else:
         print("No hay cursos para mostrar")
+
+def desmatricularse_alumno(alumno):
+    if len(alumno.mis_cursos) > 0:
+        for indice, curso in enumerate(alumno.mis_cursos):
+            print(f"{indice+1} - {curso}")
+
+        seleccion = int(input("Seleccione un curso: "))
+        if seleccion > 0 and seleccion <= len(alumno.mis_cursos):
+            for curso in alumno.mis_cursos:
+                if curso.nombre == alumno.mis_cursos[seleccion-1].nombre:
+                    alumno.desmatricular_curso(curso)
+                    print("Desmatriculacion exitosa.")
+        else:
+            print("Curso inexistente.")
+    else:
+        print("No hay cursos para mostrar")
+

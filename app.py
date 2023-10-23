@@ -57,8 +57,9 @@ def menu_principal():
 def menu_alumno():
     print("---------- MENU ----------")
     print("1. Matricularse a un curso")
-    print("2. Ver curso")
-    print("3. Volver al menú principal")
+    print("2. Desmatricularse a un curso")
+    print("3. Ver curso")
+    print("4. Volver al menu principal")
     return int(input("Ingrese una opcion: "))
 
 
@@ -80,8 +81,10 @@ while True:
                 if opcion == 1:
                     matricularse_alumno(cursos, alumno)
                 elif opcion == 2:
-                    mostar_cursos_de(alumno)
+                    desmatricularse_alumno(alumno)
                 elif opcion == 3:
+                    mostar_cursos_de(alumno)
+                elif opcion == 4:
                     break
                 else:
                     print("Opcion incorrecta")

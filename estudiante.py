@@ -15,7 +15,7 @@ class Estudiante(Usuario):
         self.mis_cursos.append(curso)
 
     def desmatricular_curso(self, curso: Curso):
-        pass
+        self.mis_cursos.remove(curso)
 
     @property
     def legajo(self) -> list:
