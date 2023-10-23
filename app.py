@@ -1,7 +1,12 @@
 from estudiante import Estudiante
 from profesor import Profesor
 from curso import Curso
+from carrera import Carrera
 from funciones import *
+
+carreras = [
+    Carrera("Tecnicatura Universitaria en Programación", 2)
+]
 
 profesores = [
     Profesor("Ingenieria en Sistemas", 2005, "Carlos",
@@ -17,24 +22,25 @@ profesores = [
 ]
 
 estudiantes = [
-    Estudiante(1, 2022, "Mariano", "Gómez",
+    Estudiante(1, 2022, carreras[0], "Mariano", "Gómez",
                "mariano@gmail.com", "contrasenia1"),
-    Estudiante(2, 2021, "Sofía", "Martínez",
+    Estudiante(2, 2021, carreras[0], "Sofía", "Martínez",
                "sofia@gmail.com", "contrasenia2"),
-    Estudiante(3, 2020, "Juan", "Pérez", "juan@gmail.com", "contrasenia3"),
-    Estudiante(4, 2019, "Valentina", "Rodríguez",
+    Estudiante(3, 2020, carreras[0], "Juan",
+               "Pérez", "juan@gmail.com", "contrasenia3"),
+    Estudiante(4, 2019, carreras[0], "Valentina", "Rodríguez",
                "valentina@gmail.com", "contrasenia4"),
-    Estudiante(5, 2018, "Facundo", "López",
+    Estudiante(5, 2018, carreras[0], "Facundo", "López",
                "facundo@gmail.com", "contrasenia5")
 ]
 
 cursos = [
-    Curso("Ingles I", "a4e52"),
-    Curso("Ingles II", "Ds3y2"),
-    Curso("Laboratorio I", "9Lom2"),
-    Curso("Laboratorio II", "hH2ml"),
-    Curso("Programación I", "mL22s"),
-    Curso("Programación II", "912Md"),
+    Curso(0, "Ingles I", "a4e52", carreras[0]),
+    Curso(1, "Ingles II", "Ds3y2", carreras[0]),
+    Curso(2, "Laboratorio I", "9Lom2", carreras[0]),
+    Curso(3, "Laboratorio II", "hH2ml", carreras[0]),
+    Curso(4, "Programación I", "mL22s", carreras[0]),
+    Curso(5, "Programación II", "912Md", carreras[0])
 ]
 
 
