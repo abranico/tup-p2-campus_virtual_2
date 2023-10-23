@@ -54,7 +54,7 @@ class Curso:
     def archivos(self):
         return self.__archivos
 
-    @carrera.setter
+    @archivos.setter
     def archivos(self, nueva_archivos):
         self.__archivos = nueva_archivos
 

@@ -77,6 +77,8 @@ def mostar_cursos_de(alumno_o_profesor, esProfesor=False):
             for curso in alumno_o_profesor.mis_cursos:
                 if curso.nombre == alumno_o_profesor.mis_cursos[seleccion-1].nombre:
                     print(f"Nombre: {curso.nombre}")
+                    for archivo in sorted(curso.archivos, lambda x:x.fecha):
+                        print(archivo)
                     if esProfesor:
                         print(f"Contraseña: {curso.contrasenia}")
 
