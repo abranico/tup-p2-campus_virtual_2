@@ -1,5 +1,5 @@
 
-def ingresar_como(alumnos_o_profesores):
+def ingresar_como(alumnos_o_profesores, Profesor=None):
     alumno_o_profesor_actual = None
     email = input("Ingrese EMAIL: ")
     password = input("Ingrese CONTRASEÑA: ")
@@ -13,7 +13,20 @@ def ingresar_como(alumnos_o_profesores):
         else:
             print("ERROR DE INGRESO")
     else:
-        print("Email incorrecto: Debe darse de alta en alumnado.")
+        if Profesor:
+            print("Profesor no existe. Puede darse de alta ingresando un codigo.")
+            codigo = input("Ingrese codigo: ")
+            if codigo == "admin":
+                nombre = input("Ingrese nombre: ")
+                apellido = input("Ingrese apellido: ")
+                titulo = input("Ingrese titulo: ")
+                anio_egreso = int(input("Ingrese año de egreso: "))
+                nuevo_profesor = Profesor(titulo, anio_egreso, nombre, apellido, email, password)
+                alumnos_o_profesores.append(nuevo_profesor)
+            else:
+                print("Codigo incorrecto.")
+        else:
+            print("Email incorrecto: Debe darse de alta en alumnado.")
 
 
 def ver_cursos(cursos):

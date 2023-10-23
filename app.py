@@ -79,7 +79,7 @@ while True:
                 else:
                     print("Opcion incorrecta")
     elif opcion == 2:
-        profesor = ingresar_como(profesores)
+        profesor = ingresar_como(profesores, Profesor)
         if profesor:
             while True:
                 opcion = menu_profesor()
