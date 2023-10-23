@@ -35,12 +35,13 @@ estudiantes = [
 ]
 
 cursos = [
-    Curso(0, "Ingles I", "a4e52", carreras[0]),
-    Curso(1, "Ingles II", "Ds3y2", carreras[0]),
-    Curso(2, "Laboratorio I", "9Lom2", carreras[0]),
-    Curso(3, "Laboratorio II", "hH2ml", carreras[0]),
-    Curso(4, "Programación I", "mL22s", carreras[0]),
-    Curso(5, "Programación II", "912Md", carreras[0])
+    Curso(0, "Ingles I", carreras[0], "a4e52"),
+    Curso(1, "Ingles II", carreras[0], "Ds3y2"),
+    Curso(2, "Laboratorio I", carreras[0], "9Lom2"),
+    Curso(3, "Laboratorio II", carreras[0], "hH2ml"),
+    Curso(4, "Programación I", carreras[0], "mL22s"),
+    Curso(5, "Programación II", carreras[0], "912Md")
+
 ]
 
 

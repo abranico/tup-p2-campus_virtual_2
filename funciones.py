@@ -32,8 +32,7 @@ def ingresar_como(alumnos_o_profesores, Profesor=None):
 
 def ver_cursos(cursos):
     for curso in sorted(cursos, key=lambda x: x.nombre):
-        print(
-            f"Materia: {curso} Carrera: Tecnicatura Universitaria en Programación")
+        print(curso)
 
 
 def nuevo_curso(cursos, Curso, profesor):
