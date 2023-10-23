@@ -34,7 +34,7 @@ cursos = [
     Curso("Laboratorio I", "9Lom2"),
     Curso("Laboratorio II", "hH2ml"),
     Curso("Programación I", "mL22s"),
-    Curso("Programación II", "912Md")
+    Curso("Programación II", "912Md"),
 ]
 
 

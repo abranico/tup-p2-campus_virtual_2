@@ -21,7 +21,8 @@ def ingresar_como(alumnos_o_profesores, Profesor=None):
                 apellido = input("Ingrese apellido: ")
                 titulo = input("Ingrese titulo: ")
                 anio_egreso = int(input("Ingrese año de egreso: "))
-                nuevo_profesor = Profesor(titulo, anio_egreso, nombre, apellido, email, password)
+                nuevo_profesor = Profesor(
+                    titulo, anio_egreso, nombre, apellido, email, password)
                 alumnos_o_profesores.append(nuevo_profesor)
             else:
                 print("Codigo incorrecto.")
@@ -30,7 +31,7 @@ def ingresar_como(alumnos_o_profesores, Profesor=None):
 
 
 def ver_cursos(cursos):
-    for curso in cursos:
+    for curso in sorted(cursos, key=lambda x: x.nombre):
         print(
             f"Materia: {curso} Carrera: Tecnicatura Universitaria en Programación")
 
