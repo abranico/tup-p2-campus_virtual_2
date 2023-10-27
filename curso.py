@@ -3,16 +3,15 @@ import string
 from carrera import Carrera
 from archivo import Archivo
 
-
 class Curso:
-    __prox_cod: int = 0
+    __prox_cod: int = 1
 
-    def __init__(self, codigo: int, nombre: str, carrera: Carrera, contrasenia_matriculacion: str = None):
+    def __init__(self, nombre: str, carrera: Carrera, contrasenia_matriculacion: str = None):
         self.__nombre = nombre
-        self.__codigo = codigo
         self.__carrera = carrera
         self.__archivos = []
-
+        self.__codigo = Curso.__prox_cod
+        Curso.__prox_cod +=1
         self.__contrasenia_matriculacion = Curso.__generar_contrasenia(
         ) if contrasenia_matriculacion is None else contrasenia_matriculacion
 

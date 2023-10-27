@@ -40,3 +40,7 @@ class Estudiante(Usuario):
     @mis_cursos.setter
     def mis_cursos(self, nueva_lista):
         self.__mis_cursos = nueva_lista
+        
+    @property
+    def carrera(self) -> list:
+        return self.__carrera

@@ -5,7 +5,9 @@ from carrera import Carrera
 from funciones import *
 
 carreras = [
-    Carrera("Tecnicatura Universitaria en Programación", 2)
+    Carrera("Tecnicatura Universitaria en Programación", 2),
+    Carrera("Ingenieria en Sistemas", 5)
+    
 ]
 
 profesores = [
@@ -35,12 +37,14 @@ estudiantes = [
 ]
 
 cursos = [
-    Curso(0, "Ingles I", carreras[0], "a4e52"),
-    Curso(1, "Ingles II", carreras[0], "Ds3y2"),
-    Curso(2, "Laboratorio I", carreras[0], "9Lom2"),
-    Curso(3, "Laboratorio II", carreras[0], "hH2ml"),
-    Curso(4, "Programación I", carreras[0], "mL22s"),
-    Curso(5, "Programación II", carreras[0], "912Md")
+    Curso( "Ingles I", carreras[0], "a4e52"),
+    Curso( "Ingles II", carreras[0], "Ds3y2"),
+    Curso( "Laboratorio I", carreras[0], "9Lom2"),
+    Curso( "Laboratorio II", carreras[0], "hH2ml"),
+    Curso( "Programación I", carreras[0], "mL22s"),
+    Curso( "Programación II", carreras[0], "912Md"),
+    Curso( "Fisica", carreras[1], "rB266")
+    
 
 ]
 
@@ -55,7 +59,7 @@ def menu_principal():
 
 
 def menu_alumno():
-    print("---------- MENU ----------")
+    print("---------- MENU ALUMNO ----------")
     print("1. Matricularse a un curso")
     print("2. Desmatricularse a un curso")
     print("3. Ver curso")
@@ -64,7 +68,7 @@ def menu_alumno():
 
 
 def menu_profesor():
-    print("---------- MENU ----------")
+    print("---------- MENU PROFESOR ----------")
     print("1. Dictar curso")
     print("2. Ver curso")
     print("3. Volver al menu principal")
@@ -94,7 +98,7 @@ while True:
             while True:
                 opcion = menu_profesor()
                 if opcion == 1:
-                    nuevo_curso(cursos, Curso, profesor)
+                    nuevo_curso(cursos, Curso, profesor, carreras)
                 elif opcion == 2:
                     mostar_cursos_de(profesor, True)
                 elif opcion == 3:
