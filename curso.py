@@ -19,7 +19,7 @@ class Curso:
         return f"Materia: {self.nombre} Carrera: {self.carrera}"
 
     def nuevo_archivo(self, archivo: Archivo):
-        pass
+        self.archivos.append(archivo)
 
     @classmethod
     def __generar_contrasenia(cls) -> str:
