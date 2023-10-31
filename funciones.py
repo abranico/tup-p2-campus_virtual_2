@@ -1,4 +1,3 @@
-from datos import cargar_cursos_a_carreras
 from archivo import Archivo
 
 
@@ -166,8 +165,7 @@ def dictar_curso(cursos, Curso, profesor, carreras):
         curso_nuevo = Curso(nombre_curso, carrera)
         profesor.dictar_curso(curso_nuevo)
         cursos.append(curso_nuevo)
-        # Se llama a la funcion que carga los cursos en las carreras
-        cargar_cursos_a_carreras()
+        carrera.mis_cursos.append(curso_nuevo)
         # Se muestran los datos del curso nuevo
         print("El curso se agrego exitosamente")
         print(f"Nombre: {nombre_curso}")

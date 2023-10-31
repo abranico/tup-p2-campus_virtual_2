@@ -55,21 +55,18 @@ cursos = [
 
 ]
 
+# Se cargan los estudiantes y los cursos en cada carrera
+
 for estudiante in estudiantes:
         for carrera in carreras:
             if estudiante.carrera == carrera:
                 carrera.mis_estudiantes.append(estudiante)
 
-def cargar_cursos_a_carreras():
-    # Limpio la lista de cursos de la carrera para que no se dupliquen
-    for carrera in carreras:
-        carrera.mis_cursos = []
     
-    # Cargo los cursos dentro de la carrera                  
-    for curso in cursos:
-        for carrera in carreras:
-            if curso.carrera == carrera:
-                carrera.mis_cursos.append(curso)
+for curso in cursos:
+    for carrera in carreras:
+        if curso.carrera == carrera:
+            carrera.mis_cursos.append(curso)
 
-cargar_cursos_a_carreras()
+
 
